@@ -4,4 +4,4 @@
 
 
 ##original here:
-#https://forums.pocketmine.net/plugins/afkkick.1617/
+# https://forums.pocketmine.net/plugins/afkkick.1617/
