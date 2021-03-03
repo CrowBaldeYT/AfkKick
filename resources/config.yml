@@ -1,0 +1,12 @@
+#DO NOT CHANGE THE VERSION
+Version: 1.1
+#Time in minutes to kick a player for being akf (not moving).
+#in Minutes!
+Time: 1
+#Message to send player on kick for being afk.
+Kick-Message: "\n§cYou got kicked for AFK"
+#Scan-Interval is the time in seconds to check all players movement
+#This can be set between 1 and 30 seconds
+#Useful for slower pc's to lesson the work caused from this plugin
+#Recommended time is 5 seconds
+Scan-Interval: 5
