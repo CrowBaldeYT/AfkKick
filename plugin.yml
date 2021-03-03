@@ -1,0 +1,13 @@
+name: AfkKick
+main: DXM_Hip\AfkKick\Main
+version: 1.0.0
+api: [3.0.0]
+author: 
+- XxDXM_hippiexX
+- CrowBaldeYT
+description: Kick players for not moving
+
+permissions:
+    afk.kick.bypass:
+        description: Gives player permission to be afk
+        default: op
