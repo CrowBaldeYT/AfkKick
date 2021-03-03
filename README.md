@@ -1,6 +1,6 @@
 # AfkKick
 
-##Renewed by Crow Balde 
+## Renewed by Crow Balde 
 
 
 ##original here:
