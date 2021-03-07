@@ -114,7 +114,6 @@ class Main extends PluginBase implements Listener {
         if(!is_numeric($this->getScanInterval()) or !in_array($this->getScanInterval(), range(1, 30)))
         {
             $time = 5;
-            $this->getLogger()->info(TextFormat::GREEN."[AFK Kick] ".TextFormat::RED."Invalid Scan-Interval set in config. Check time set to 5 seconds.");
         }else{
             $time = $this->getScanInterval();
         }
@@ -132,7 +131,6 @@ class Main extends PluginBase implements Listener {
         }
         if($this->getConfig()->get("Version") == null || $this->getConfig()->get("Version") != "1.1")
         {
-            $this->getLogger()->info(TextFormat::GREEN."[AFK Kick] ".TextFormat::RED ."An invalid config file was found, generating a new one...");
             
             unlink($this->getDataFolder() . "config.yml");
             file_put_contents($this->getDataFolder() . "config.yml",$this->getResource("config.yml"));
@@ -150,7 +148,7 @@ class Main extends PluginBase implements Listener {
                    $time = $this->time[$player->getName()];
                    if(time() - $time >= ($this->getKickTime() * 60) and !$player->hasPermission("afk.kick.bypass"))
                    {
-                   $player->kick(TextFormat::RED.$this->getKickMsg());
+                   $player->kick($this->getKickMsg());
                    $this->RemovePlayer($player);
                    }
                 }
