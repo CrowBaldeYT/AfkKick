@@ -131,7 +131,6 @@ class Main extends PluginBase implements Listener {
         }
         if($this->getConfig()->get("Version") == null || $this->getConfig()->get("Version") != "1.1")
         {
-            
             unlink($this->getDataFolder() . "config.yml");
             file_put_contents($this->getDataFolder() . "config.yml",$this->getResource("config.yml"));
         }
@@ -146,7 +145,7 @@ class Main extends PluginBase implements Listener {
                 if(isset($this->time[$player->getName()]))
                 {
                    $time = $this->time[$player->getName()];
-                   if(time() - $time >= ($this->getKickTime() * 60) and !$player->hasPermission("afk.kick.bypass"))
+                   if(time() - $time >= ($this->getKickTime() * 60) and !$player->hasPermission("afk.bypass"))
                    {
                    $player->kick($this->getKickMsg());
                    $this->RemovePlayer($player);
