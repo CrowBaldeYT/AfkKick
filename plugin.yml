@@ -8,6 +8,6 @@ author:
 description: Kick players for not moving
 
 permissions:
-    afk.kick.bypass:
+    afk.bypass:
         description: Gives player permission to be afk
-        default: op
+        default: OP
