@@ -145,7 +145,7 @@ class Main extends PluginBase implements Listener {
                 if(isset($this->time[$player->getName()]))
                 {
                    $time = $this->time[$player->getName()];
-                   if(time() - $time >= ($this->getKickTime() * 60) and !$player->hasPermission("afk.bypass"))
+                   if(time() - $time >= ($this->getKickTime() * 60) and !$player->hasPermission("afk"))
                    {
                    $player->kick($this->getKickMsg());
                    $this->RemovePlayer($player);
