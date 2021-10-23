@@ -10,7 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\scheduler\Task;
 use pocketmine\Player;
 
-use DXM_Hip\AfkKick\task\afkTimer;
+use DXM_Hip\AfkKick\task\afkKick;
 
 class Main extends PluginBase implements Listener {
     
@@ -117,7 +117,7 @@ class Main extends PluginBase implements Listener {
         }else{
             $time = $this->getScanInterval();
         }
-        $this->getScheduler()->scheduleRepeatingTask(new afkTimer($this), $time);
+        $this->getScheduler()->scheduleRepeatingTask(new afkKick($this), $time);
         
     }
     
