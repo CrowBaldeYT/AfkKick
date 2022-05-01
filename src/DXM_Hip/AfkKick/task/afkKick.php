@@ -5,7 +5,7 @@ namespace DXM_Hip\AfkKick\task;
 use pocketmine\scheduler\Task;
 use DXM_Hip\AfkKick\Main;
 
-class afkTimer extends Task {
+class afkKick extends Task {
     
     public function __construct(Main $plugin) {
          $this->plugin = $plugin;
